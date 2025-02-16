@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s infinite linear;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Background Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Weather Form */
+.weatherForm {
+    margin: 20px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cityInput {
+    padding: 12px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: 2px solid hsla(0, 0%, 20%, 0.3);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    background-color: hsla(122, 39%, 50%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:active {
+    background-color: hsla(122, 39%, 40%);
+}
+
+/* Weather Card */
+.card {
+    background-image: linear-gradient(90deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+    padding: 40px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+    min-width: 280px;
+    max-width: 90%;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Headings & Text */
+h1 {
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.cityDisplay, .tempDisplay {
+    font-size: 3rem;
+    color: hsla(0, 0%, 0%, 0.75);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.humidityDisplay {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.descDisplay {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.weatherEmoji {
+    margin: 0;
+    font-size: 6rem;
+}
+
+.errorDisplay {
+    font-size: 2rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.75);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .weatherForm {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .cityInput, button[type="submit"] {
+        font-size: 1.4rem;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .cityDisplay, .tempDisplay {
+        font-size: 2.5rem;
+    }
+
+    .weatherEmoji {
+        font-size: 5rem;
+    }
+
+    .card {
+        padding: 25px;
+        width: 100%;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .weatherForm {
+        width: 100%;
+    }
+
+    .cityInput, button[type="submit"] {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .cityDisplay, .tempDisplay {
+        font-size: 2rem;
+    }
+
+    .weatherEmoji {
+        font-size: 4rem;
+    }
+
+    .card {
+        padding: 20px;
+        width: 100%;
+    }
+}
